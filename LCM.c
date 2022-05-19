@@ -1,22 +1,20 @@
-
 #include<stdio.h>
 int main()
 {
-    int n1,n2,max;
-    scanf("%d%d",&n1,&n2);
-    max = (n1>n2)?n1:n2;
-    while(1)
-{
-if (max % n1 == 0 && max % n2 == 0)
-     {
-         printf("%d",max);
-         break;
-     }
-     
-        ++max;
+    int a,b,t=2,lcm=1;
+    scanf("%d%d",&a,&b);
+    while(a>=t&&b>=t)
+    {
+        if(a%t==0&&b%t==0)
+        {
+            a=a/t;
+            b=b/t;
+            lcm=lcm*t;
+        }
+        else
+        {
+            t++;
+        }
+    }
+    printf("%d",a*b*lcm);
 }
-return 0;
-}
-    
-
-
