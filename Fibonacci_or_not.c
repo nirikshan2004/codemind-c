@@ -1,29 +1,23 @@
-
 #include<stdio.h>
 int main()
 {
- int a,b,c,next,num;
- scanf("%d", &num);
- if((num==0)||(num==1))
-   printf("
-%d is a Fibonacci term",num);
- else
- {
-   a=0;
-   b=1;
-   c=a+b;
-   while(c<num)
-   {
-     a=b;
-     b=c;
-     c=a+b;
-   }
-   if(c==num)
-     printf("True");
-   else
-     printf("False");
- }
-
- return 0;
+    int a,b,c,n,i;
+    scanf("%d",&n);
+    a=0;
+    b=1;
+    c=0;
+    while(c<n)
+    {
+        a=b;
+        b=c;
+        c=a+b;
+    }
+    if(c==n)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
 }
-
